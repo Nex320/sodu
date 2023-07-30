@@ -15,3 +15,9 @@ chmod +x install
 
 # 4 - Run the installer.
 ./install
+
+
+# Ever want to remove sodu?
+Just run the following command (Please run the chmod command before doing this!)
+
+./install --remove
