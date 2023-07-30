@@ -1,6 +1,12 @@
 #!/bin/bash
 
-chmod +x ./sodu
-sudo cp ./sodu /usr/bin/
-echo sodu has been installed!
+if [ "$1" == "--remove" ]; then
+    sudo rm -f /usr/bin/sodu
+    echo sodu has been removed!
+else
+    chmod +x ./sodu
+    sudo cp ./sodu /usr/bin/
+    echo sodu has been installed!
+fi
+
 exit
