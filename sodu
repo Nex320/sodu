@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sentences=("Its sudo you dope..." "Your not making this any easier for me." "Really?" "Are you is have dumb?" "I hate my job..." "Man do you work at Mcdonalds or something?" "sodu yourself." "You're wasting my time." "..." "Jeez your slow." "What the hell is a sodu?" "Its not that hard." "Its REALLY not that hard..." "Detecting braincells... 0 Found!" "Your mama so fat, When she types... SHE HITS ALL THE KEYS.")
+
+selected_sentence=${sentences[$RANDOM % ${#sentences[@]}]}
+
+echo $selected_sentence
+
+sleep 1
+
+sudo "$@"
