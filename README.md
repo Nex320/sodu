@@ -18,6 +18,6 @@ chmod +x install
 
 
 # Ever want to remove sodu?
-Just run the following command (Please run the chmod command before doing this!)
+Just run the following command (Please enter the sodu directory and run the chmod command before doing this!)
 
 ./install --remove
