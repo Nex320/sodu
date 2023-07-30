@@ -1,12 +1,20 @@
 #!/bin/bash
 
 if [ "$1" == "--remove" ]; then
-    sudo rm -f /usr/bin/sodu
-    echo sodu has been removed!
+    if [ ! -f "/usr/bin/sodu" ]; then
+        echo "sodu is already removed."
+    else
+        sudo rm -f /usr/bin/sodu
+        echo "sodu has been removed."
+    fi
 else
-    chmod +x ./sodu
-    sudo cp ./sodu /usr/bin/
-    echo sodu has been installed!
+    if [ -f "/usr/bin/sodu" ]; then
+        echo "sodu is already installed."
+    else
+        chmod +x ./sodu
+        sudo cp ./sodu /usr/bin/
+        echo "sodu has been installed."
+    fi
 fi
 
 exit
